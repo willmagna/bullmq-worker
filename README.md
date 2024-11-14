@@ -24,7 +24,7 @@ Run Worker
 
 ### Run the project in Docker Container
 
-#### You will need the bullmq-basics project https://github.com/willmagna/bull-basic-template
+#### You will need the bullmq-basics project https://github.com/willmagna/bullmq-basics
 
 Create a Docker Network
 
