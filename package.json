@@ -4,12 +4,19 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev:worker": "nodemon src/worker.js"
+    "dev:worker": "nodemon src/worker.js",
+    "build": "babel src -d dist",
+    "start": "node ./dist/worker.js"
   },
   "dependencies": {
     "bullmq": "^5.26.1",
     "dotenv": "^16.4.5",
     "nodemon": "^3.1.7",
     "sucrase": "^3.35.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.25.9",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0"
   }
 }
