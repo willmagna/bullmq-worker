@@ -5,7 +5,12 @@ import * as queues from "./queues";
 
 const workerList = Object.values(queues).map((queue) => ({
   instance: new Worker(queue.name, queue.job, {
-    connection: redisConfig,
+    connection: {
+      ...redisConfig,
+      retryStrategy: function (times) {
+        return Math.max(Math.min(Math.exp(times), 20000), 1000);
+      },
+    },
     autorun: false, // Should not execute when instatiante
     limiter: queue.limiter,
   }),
