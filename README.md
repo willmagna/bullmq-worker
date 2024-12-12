@@ -54,3 +54,9 @@ WORKER - Build Docker Image
 WORKER - Run Docker Image
 
     docker run --network queue-bullmq --env-file ./.env -d --name bullmq-worker bullmq-worker
+
+### Oficial Documentation and Github Repo
+
+https://docs.bullmq.io/
+
+https://github.com/taskforcesh/bullmq
